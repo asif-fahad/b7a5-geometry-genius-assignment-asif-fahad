@@ -122,9 +122,6 @@ const name = "Ellipse";
 displayData(sum, name);
 })
 
-
-
-
 // common function to display data
 function displayData(sum, name) {
     const container = document.getElementById("table-container");
