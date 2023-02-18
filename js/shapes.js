@@ -116,7 +116,7 @@ serial += 1;
 
 // const sum = 3.14 * parseFloat(ellipseAValue) * parseFloat(ellipseBValue);
 
-const sum = parseFloat((3.14 * getInputTextValue("card-six-input-one") * getInputTextValue("card-six-input-two")).toFixed(1));
+const sum = parseFloat((3.14 * getInputTextValue("card-six-input-one") * getInputTextValue("card-six-input-two")).toFixed(2));
 const name = "Ellipse";
 
 displayData(sum, name);

@@ -10,15 +10,15 @@
 </head>
 <body>
     <!--       header            -->
-    <header class="container bg-blue-100 mx-auto mt-5">
+    <header class="bg-blue-100 mx-auto md:mx-12 lg:mx-12 mt-5">
         <div class="flex justify-between px-8">
-            <div>
+            <div class="py-4">
                 <h1 class="text-4xl font-bold">Interactive</h1>
                 <br>
                 <p class="text-xl font-semibold">Geometry Genius</p>
             </div>
             <div>
-                <button onclick="location.href = 'blog.html';" class= "bg-blue-600 my-5 px-8 py-2 text-white font-medium rounded-lg">Blog</button>
+                <button onclick="location.href = 'blog.html';" class= "bg-blue-600 my-9 px-8 py-2 text-white font-medium rounded-lg">Blog</button>
             </div>
         </div>
     </header>
@@ -28,7 +28,7 @@
             
             <!--            cards           -->
             
-            <div class="w-3/4 grid grid-cols md:grid-cols-3 lg:grid-cols-3 gap-8">
+            <div class="w-3/4 grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- card 1 -->
                 <div id="card-bg-hover-1" class="card w-96 h-100 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
@@ -36,7 +36,7 @@
                     </figure>
                     <div  class="card-body items-center text-center">
                       <h2 class="card-title">Triangle</h2>
-                      <p>Area (A) = 0.5 x b x h </p>
+                      <p>Area (A) = 0.5 × b × h </p>
                       <div class="flex gap-5 w-auto">
                         <input type="text" name="" id="card-one-input-one" class="w-20 bg-gray-200"> cm
                         <input type="text" name="" id="card-one-input-two" class="w-20 bg-gray-200"> cm
@@ -53,7 +53,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Rectangle</h2>
-                      <p>Area (A) = w x l</p>
+                      <p>Area (A) = w × l</p>
                       <div class="flex gap-5 w-auto">
                         <input type="text" name="" id="card-two-input-one" class="w-20 bg-gray-200"> cm
                         <input type="text" name="" id="card-two-input-two" class="w-20 bg-gray-200"> cm
@@ -70,7 +70,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Parallelogram</h2>
-                        <p>Area (A) = b x h</p>
+                        <p>Area (A) = b × h</p>
                         <h4 class="font-medium">b = <span id="card-three-input-one">10</span>cm, h = <span id="card-three-input-two">12</span>cm</h4>
                         <div class="card-actions">
                         <button id="third-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
@@ -84,7 +84,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Rhombus</h2>
-                      <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                      <p>Area (A) = 0.5 × d<sub>1</sub> × d<sub>2</sub></p>
                       <h4 class="font-medium">d<sub>1</sub> = <span id="card-four-input-one">16</span>cm, d<sub>2</sub> = <span id="card-four-input-two">8</span>cm</h4>
                       <div class="card-actions">
                         <button id="forth-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
@@ -98,7 +98,7 @@
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Pentagon</h2>
-                      <p>Area (A) = 0.5 x p x b</p>
+                      <p>Area (A) = 0.5 × p × b</p>
                       <h4 class="font-medium">p = <span id="card-five-input-one">6</span>cm, b = <span id="card-five-input-two">10</span>cm</h4>
                       <div class="card-actions">
                         <button id="fifth-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
@@ -119,8 +119,7 @@
                       </div>
                     </div>
                   </div>
-
-            </div>
+                </div>
             <!--            calculation         -->
             <div class="cart-details w-full md:w-[30%] lg:w-[30%] h-full mx-auto border">
                 <h1 class="text-2xl text-center font-bold underline mt-5">
@@ -138,10 +137,10 @@
                     </thead>
                     <tbody id="table-container">
                       <!-- <tr>
-                        <th>1</th>
-                        <td>Cy Ganderton</td>
-                        <td>Quality Control Specialist</td>
-                        <td>Blue</td>
+                        <th></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr> -->
                     </tbody>
                   </table>
