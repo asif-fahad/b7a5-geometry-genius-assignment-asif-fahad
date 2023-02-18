@@ -38,11 +38,11 @@
                       <h2 class="card-title">Triangle</h2>
                       <p>Area (A) = 0.5 x b x h </p>
                       <div class="flex gap-5 w-auto">
-                        <input type="text" name="" id="" class="w-20 bg-gray-200"> cm
-                        <input type="text" name="" id="" class="w-20 bg-gray-200"> cm
+                        <input type="text" name="" id="card-one-input-one" class="w-20 bg-gray-200"> cm
+                        <input type="text" name="" id="card-one-input-two" class="w-20 bg-gray-200"> cm
                       </div>
                       <div class="card-actions">
-                        <button class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
+                        <button id="first-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -55,11 +55,11 @@
                       <h2 class="card-title">Rectangle</h2>
                       <p>Area (A) = w x l</p>
                       <div class="flex gap-5 w-auto">
-                        <input type="text" name="" id="" class="w-20 bg-gray-200"> cm
-                        <input type="text" name="" id="" class="w-20 bg-gray-200"> cm
+                        <input type="text" name="" id="card-two-input-one" class="w-20 bg-gray-200"> cm
+                        <input type="text" name="" id="card-two-input-two" class="w-20 bg-gray-200"> cm
                       </div>
                       <div class="card-actions">
-                        <button class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
+                        <button id="second-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -71,9 +71,9 @@
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Parallelogram</h2>
                         <p>Area (A) = b x h</p>
-                        <h4 class="font-medium">b = 10cm, h = 12cm</h4>
+                        <h4 class="font-medium">b = <span id="card-three-input-one">10</span>cm, h = <span id="card-three-input-two">12</span>cm</h4>
                         <div class="card-actions">
-                        <button class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
+                        <button id="third-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -85,9 +85,9 @@
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Rhombus</h2>
                       <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                      <h4 class="font-medium">d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</h4>
+                      <h4 class="font-medium">d<sub>1</sub> = <span id="card-four-input-one">16</span>cm, d<sub>2</sub> = <span id="card-four-input-two">8</span>cm</h4>
                       <div class="card-actions">
-                        <button class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
+                        <button id="forth-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -99,9 +99,9 @@
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Pentagon</h2>
                       <p>Area (A) = 0.5 x p x b</p>
-                      <h4 class="font-medium">p = 6cm, b = 10cm</h4>
+                      <h4 class="font-medium">p = <span id="card-five-input-one">6</span>cm, b = <span id="card-five-input-two">10</span>cm</h4>
                       <div class="card-actions">
-                        <button class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
+                        <button id="fifth-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -113,9 +113,9 @@
                     <div class="card-body items-center text-center">
                       <h2 class="card-title">Ellipse</h2>
                       <p>Area (A) = πab</p>
-                      <h4 class="font-medium">a = 10cm, b = 4cm</h4>
+                      <h4 class="font-medium">a = <span id="card-six-input-one">10</span>cm, b = <span id="card-six-input-two">4</span>cm</h4>
                       <div class="card-actions">
-                        <button class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
+                        <button id="sixth-card-btn" class="bg-blue-600 my-5 px-20 py-2 text-white font-medium rounded-lg">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -123,8 +123,29 @@
             </div>
             <!--            calculation         -->
             <div class="w-3/12 h-96 bg-base-100 shadow-xl">
-                <h1>Area Calculation</h1>
+                <h1 class="mt-4 items-center text-center font-bold underline">Area Calculation</h1>
             </div>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                  <thead>
+                    <!-- <tr>
+                      <th>No</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                    </tr> -->
+                  </thead>
+                  <tbody id="table-container">
+                    <!-- <tr>
+                      <th>1</th>
+                      <td>Cy Ganderton</td>
+                      <td>Quality Control Specialist</td>
+                      <td>Blue</td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
         </section>
     </main>
 
