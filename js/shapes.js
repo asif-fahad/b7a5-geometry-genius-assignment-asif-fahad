@@ -11,6 +11,7 @@ function getInputFieldValue(id){
     else {
         return inputFieldValue;
     }
+    
 }
 
 // common function for getting text value from last four cards
@@ -131,16 +132,68 @@ function displayData(sum, name) {
     tr.innerHTML = `
       <td>${serial}</td>
       <td>${name}</td>
-      <td>${sum}</td>
+      <td>${sum}cm<sup>2</sup></td>
       <td>
       <button class=" bg-blue-600 my-5 px-2 py-2 text-white font-medium rounded-lg">Convert to  <span>m<sup>2</sup></span></button>
       </td>
       
     `;
     container.appendChild(tr);
-  }
+}
 
 
-//   <td>${priceOfP}</td>
-//       <td>${quantityOfp}</td>
-//       <td>${resultP}</td>
+// Random background color functions
+function randomColor() {
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+      color.push(Math.floor(Math.random() * 256));
+    }
+    return 'rgb(' + color.join(', ') + ')';
+} 
+// card 1
+document.getElementById('card-bg-hover-1').addEventListener('mouseenter', event => {
+    event.target.style.backgroundColor = randomColor();
+});
+
+document.getElementById('card-bg-hover-1').addEventListener('mouseleave', event => {
+    event.target.style.backgroundColor = "white";
+});
+// card 2
+document.getElementById('card-bg-hover-2').addEventListener('mouseenter', event => {
+    event.target.style.backgroundColor = randomColor();
+});
+document.getElementById('card-bg-hover-2').addEventListener('mouseleave', event => {
+    event.target.style.backgroundColor = "white";
+});
+
+// card 3
+document.getElementById('card-bg-hover-3').addEventListener('mouseenter', event => {
+    event.target.style.backgroundColor = randomColor();
+});
+document.getElementById('card-bg-hover-3').addEventListener('mouseleave', event => {
+    event.target.style.backgroundColor = "white";
+});
+
+// card 4
+document.getElementById('card-bg-hover-4').addEventListener('mouseenter', event => {
+    event.target.style.backgroundColor = randomColor();
+});
+document.getElementById('card-bg-hover-4').addEventListener('mouseleave', event => {
+    event.target.style.backgroundColor = "white";
+});
+
+// card 5
+document.getElementById('card-bg-hover-5').addEventListener('mouseenter', event => {
+    event.target.style.backgroundColor = randomColor();
+});
+document.getElementById('card-bg-hover-5').addEventListener('mouseleave', event => {
+    event.target.style.backgroundColor = "white";
+});
+
+// card 6
+document.getElementById('card-bg-hover-6').addEventListener('mouseenter', event => {
+    event.target.style.backgroundColor = randomColor();
+});
+document.getElementById('card-bg-hover-6').addEventListener('mouseleave', event => {
+    event.target.style.backgroundColor = "white";
+});

@@ -5,21 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
-
+        <div class="flex justify-between px-8">
+            <div>
+                <h1 class="text-4xl font-bold">Interactive</h1>
+                <br>
+                <p class="text-xl font-semibold">Geometry Genius</p>
+            </div>
+            <div>
+                <button onclick="location.href = 'index.html';" class= "bg-gray-600 my-5 px-8 py-2 text-white font-medium rounded-lg">Home</button>
+            </div>
+        </div>
     </header>
     <main>
-        <article>
-            1) What is DOM and what is the purpose of DOM?
+        <section class="container mx-auto mt-8 gap-8">
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    1) What is DOM and what is the purpose of DOM?
+                </div>
+                <div class="collapse-content"> 
+                  <p>Ans: DOM full form is Document Object Model. DOM is used for making a dynamic websites. We can add or delete HTML elements and CSS by using DOM without writing code in HTML page.</p>
+                </div>
+            </div>
+            
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    2) How will you select HTML elements using DOM? Name the DOM methods.
+                </div>
+                <div class="collapse-content"> 
+                  <p>Ans: We can select HTML elements by using DOM. We can use "getElementsByTagName()" for selecting Tag elements, "getElementsByClassName()" for selecting Class elements, "getElementById()" for selecting Id elements, "querySelector()" for selecting first element that matches the selector, "querySelectorAll()" for selecting same selector.</p>
+                </div>
+            </div>
 
-            2) How will you select HTML elements using DOM? Name the DOM methods.
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    3) What is event bubble?
+                </div>
+                <div class="collapse-content"> 
+                  <p>Ans: Event bubble means when an element receives an event then it goes up to parent until it is stopped. It goes up to containing elements HTML tree.</p>
+                </div>
+            </div>
 
-            3) What is event bubble?
-
-            4) What is a callback function and why will you use it?
-        </article>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    4) What is a callback function and why will you use it?
+                </div>
+                <div class="collapse-content"> 
+                  <p>Ans: A callback function is used for calling another function for executing a code. It is passed as an argument.</p>
+                </div>
+            </div>
+        </section>
     </main>
     
 </body>
