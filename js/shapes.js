@@ -4,7 +4,13 @@ let serial = 0;
 function getInputFieldValue(id){
     const inputField = document.getElementById(id);
     const inputFieldValue = inputField.value;
-    return inputFieldValue;
+    
+    if (inputFieldValue <= 0 || inputFieldValue == "" || isNaN(inputFieldValue)){
+        return alert('Please Provide Valid Number');
+    }
+    else {
+        return inputFieldValue;
+    }
 }
 
 // common function for getting text value from last four cards
@@ -29,6 +35,7 @@ const sum = 0.5 * getInputFieldValue("card-one-input-one") * getInputFieldValue(
 const name = "Triangle";
 
 displayData(sum, name);
+
 })
 
 // second card**********
@@ -41,8 +48,9 @@ serial += 1;
 // const rectangleLValue = rectangleL.value;
 
 const sum = getInputFieldValue("card-two-input-one") * getInputFieldValue("card-two-input-two");
-displayData(sum);
+const name = "Rectangle";
 
+displayData(sum, name);
 })
 
 // third card**********
@@ -57,8 +65,9 @@ serial += 1;
 // const sum = parseFloat(parallelogramBValue) * parseFloat(parallelogramHValue);
 
 const sum = getInputTextValue("card-three-input-one") * getInputTextValue("card-three-input-two");
-displayData(sum);
+const name = "Parallelogram";
 
+displayData(sum, name);
 })
 
 // forth card**********
@@ -73,8 +82,9 @@ serial += 1;
 // const sum = 0.5 * parseFloat(rhombusD1Value) * parseFloat(rhombusD2Value);
 
 const sum = 0.5 * getInputTextValue("card-four-input-one") * getInputTextValue("card-four-input-two");
-displayData(sum);
+const name = "Rhombus";
 
+displayData(sum, name);
 })
 
 // fifth card**********
@@ -89,8 +99,9 @@ serial += 1;
 // const sum = 0.5 * parseFloat(pentagonPValue) * parseFloat(pentagonBValue);
 
 const sum = 0.5 * getInputTextValue("card-five-input-one") * getInputTextValue("card-five-input-two");
-displayData(sum);
+const name = "Pentagon";
 
+displayData(sum, name);
 })
 
 // sixth card**********
@@ -105,8 +116,9 @@ serial += 1;
 // const sum = 3.14 * parseFloat(ellipseAValue) * parseFloat(ellipseBValue);
 
 const sum = parseFloat((3.14 * getInputTextValue("card-six-input-one") * getInputTextValue("card-six-input-two")).toFixed(1));
-displayData(sum);
-console.log(sum);
+const name = "Ellipse";
+
+displayData(sum, name);
 })
 
 
@@ -121,7 +133,7 @@ function displayData(sum, name) {
       <td>${name}</td>
       <td>${sum}</td>
       <td>
-      <button class=" bg-blue-600 my-5 px-8 py-2 text-white font-medium rounded-lg">Convert to  <span>m<sup>2</sup></span></button>
+      <button class=" bg-blue-600 my-5 px-2 py-2 text-white font-medium rounded-lg">Convert to  <span>m<sup>2</sup></span></button>
       </td>
       
     `;
