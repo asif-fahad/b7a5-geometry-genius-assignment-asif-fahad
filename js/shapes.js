@@ -26,7 +26,9 @@ serial += 1;
 // const sum = 0.5 * triangleBValue * triangleHValue;
 
 const sum = 0.5 * getInputFieldValue("card-one-input-one") * getInputFieldValue("card-one-input-two");
-console.log(sum);
+const name = "Triangle";
+
+displayData(sum, name);
 })
 
 // second card**********
@@ -39,8 +41,8 @@ serial += 1;
 // const rectangleLValue = rectangleL.value;
 
 const sum = getInputFieldValue("card-two-input-one") * getInputFieldValue("card-two-input-two");
+displayData(sum);
 
-console.log(sum);
 })
 
 // third card**********
@@ -55,7 +57,8 @@ serial += 1;
 // const sum = parseFloat(parallelogramBValue) * parseFloat(parallelogramHValue);
 
 const sum = getInputTextValue("card-three-input-one") * getInputTextValue("card-three-input-two");
-console.log(sum);
+displayData(sum);
+
 })
 
 // forth card**********
@@ -70,7 +73,8 @@ serial += 1;
 // const sum = 0.5 * parseFloat(rhombusD1Value) * parseFloat(rhombusD2Value);
 
 const sum = 0.5 * getInputTextValue("card-four-input-one") * getInputTextValue("card-four-input-two");
-console.log(sum);
+displayData(sum);
+
 })
 
 // fifth card**********
@@ -85,7 +89,8 @@ serial += 1;
 // const sum = 0.5 * parseFloat(pentagonPValue) * parseFloat(pentagonBValue);
 
 const sum = 0.5 * getInputTextValue("card-five-input-one") * getInputTextValue("card-five-input-two");
-console.log(sum);
+displayData(sum);
+
 })
 
 // sixth card**********
@@ -99,8 +104,8 @@ serial += 1;
 
 // const sum = 3.14 * parseFloat(ellipseAValue) * parseFloat(ellipseBValue);
 
-const sum = (3.14 * getInputTextValue("card-six-input-one") * getInputTextValue("card-six-input-two")).toFixed(1);
-
+const sum = parseFloat((3.14 * getInputTextValue("card-six-input-one") * getInputTextValue("card-six-input-two")).toFixed(1));
+displayData(sum);
 console.log(sum);
 })
 
@@ -108,20 +113,22 @@ console.log(sum);
 
 
 // common function to display data
-// function displayData(nameOfP, priceOfP, quantityOfp, resultP) {
-//     const container = document.getElementById("table-container");
-//     const tr = document.createElement("tr");
-//     tr.innerHTML = `
-//       <td>${serial}</td>
-//       <td>${nameOfP}</td>
-//       <td>${priceOfP}</td>
+function displayData(sum, name) {
+    const container = document.getElementById("table-container");
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${serial}</td>
+      <td>${name}</td>
+      <td>${sum}</td>
+      <td>
+      <button class=" bg-blue-600 my-5 px-8 py-2 text-white font-medium rounded-lg">Convert to  <span>m<sup>2</sup></span></button>
+      </td>
+      
+    `;
+    container.appendChild(tr);
+  }
+
+
+//   <td>${priceOfP}</td>
 //       <td>${quantityOfp}</td>
 //       <td>${resultP}</td>
-//       <td>
-//       <button class="btn btn-sm btn-blue-500">Square</button>
-//       </td>
-      
-//     `;
-//     container.appendChild(tr);
-//     document.getElementById("total-product").innerText = serial;
-//   }
